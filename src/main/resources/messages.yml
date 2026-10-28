@@ -1,0 +1,199 @@
+time:
+  days: "d"
+  hours: "h"
+  minutes: "m"
+  seconds: "s"
+  ended: "encerrando..."
+  item-amount: " &7x{amount}"
+general:
+  no-permission: "&cVoce nao tem permissao para isso."
+  players-only: "Apenas jogadores podem usar o leilao."
+  console-reloaded: "Config do leilao recarregada."
+  reloaded: "&aConfiguracoes recarregadas."
+  busy: "&cVoce esta no meio de uma operacao. Responda no chat ou digite &f{cancel}&c."
+  invalid-auction: "&cLeilao invalido."
+  auction-ended: "&cEsse leilao ja encerrou."
+  economy-unavailable: "&cEconomia indisponivel no momento."
+  inventory-full: "&cSeu inventario esta cheio."
+  item-claimed: "&aVoce pegou &f{item}&a."
+  pending-claims: "&aVoce tem &e{count} &aitem(ns) esperando em &e/leilao win&a."
+sell:
+  limit-reached: "&cVoce ja atingiu o limite de &e{max} &citens a venda."
+  limit-exceeded: "&cVoce so pode ter &e{max} &citens a venda ao mesmo tempo."
+  limit-remaining: "&cLimite de &e{max} &citens a venda. Voce ainda pode colocar &e{remaining}&c."
+  banned-item: "&cO item &f{item} &ce proibido no leilao."
+  banned-item-remove: "&cO item &f{item} &ce proibido no leilao. Retire-o do menu."
+  no-items: "&cColoque pelo menos um item no menu."
+  created: "&a{count} item(ns) colocado(s) em leilao por &e{time} &acom lance inicial de &e{amount}&a."
+  prompt-price: "&eDigite no chat o &6lance inicial &e(ex: 500, 1.5k, 2m). &7Digite &f{cancel} &7para desistir."
+  prompt-price-range: "&7Minimo: &f{min} &7| Maximo: &f{max}"
+  price-invalid: "&cValor invalido. Use por exemplo: 500, 1.5k, 2m."
+  price-out-of-range: "&cO lance inicial deve estar entre &e{min} &ce &e{max}&c."
+  prompt-duration: "&eAgora digite a &6duracao &e(ex: 30m, 2h, 1d, 1d12h). Min: &f{min} &e| Max: &f{max}"
+  duration-invalid: "&cDuracao invalida. Use por exemplo: 30m, 2h, 1d, 1d12h."
+  duration-out-of-range: "&cA duracao deve estar entre &e{min} &ce &e{max}&c."
+bid:
+  prompt: "&eDigite no chat o valor do seu lance. Minimo: &a{min}&e. &7Digite &f{cancel} &7para desistir."
+  invalid: "&cValor invalido. Use por exemplo: 500, 1.5k, 2m."
+  own-item: "&cVoce nao pode dar lance no seu proprio item."
+  already-top: "&cVoce ja tem o maior lance neste item."
+  too-low: "&cSeu lance precisa ser de no minimo &e{min}&c. Digite outro valor ou &f{cancel}&c."
+  no-funds: "&cVoce nao tem saldo suficiente (&e{amount}&c)."
+  withdraw-failed: "&cNao foi possivel cobrar o lance: {error}"
+  placed: "&aLance de &e{amount} &aregistrado em &f{item}&a!"
+  notify-seller: "&e{player} &adeu um lance de &e{amount} &ano seu item &f{item}&a."
+  notify-outbid: "&cSeu lance de &e{old_amount} &cem &f{item} &cfoi superado por &e{player} &c({amount}). O valor foi devolvido."
+  broadcast: "&e{player} &7deu um lance de &a{amount} &7em &f{item}&7! "
+  broadcast-button: "&b&l[CLIQUE PARA VER O ITEM]"
+  broadcast-hover: "&7{item}\n&7Vendedor: &f{seller}\n&7Lance: &a{amount}\n&eClique para abrir"
+end:
+  won: "&aVoce venceu o leilao de &f{item} &apor &e{amount}&a! Use &e/leilao win &apara pegar o item."
+  sold: "&aSeu item &f{item} &afoi vendido para &e{bidder} &apor &e{amount}&a{tax}&a."
+  tax-suffix: " &7(taxa: {tax})"
+  no-bids: "&cSeu leilao de &f{item} &cterminou sem lances. O item esta em &e/leilao win&c."
+cancel:
+  self: "&aLeilao cancelado. Pegue o item em &e/leilao win&a."
+  admin-done: "&aLeilao #{id} cancelado."
+  seller-notified: "&cSeu leilao de &f{item} &cfoi cancelado por um administrador. Item em &e/leilao win&c."
+  bidder-refund: "&cO leilao de &f{item} &cfoi cancelado. Seu lance de &e{amount} &cfoi devolvido."
+input:
+  cancelled: "&cOperacao cancelada."
+  timeout: "&cTempo esgotado. Operacao cancelada."
+  shutdown: "&cO leilao foi desligado. Operacao cancelada."
+  search-prompt: "&eDigite o nome de um jogador ou item para pesquisar. &7Digite &f{cancel} &7para desistir."
+gui:
+  no-search: "&fnenhuma"
+  titles:
+    market: "Leilao"
+    market-search: "Leilao: \"{search}\""
+    player: "Leilao de {player}"
+    claims: "Itens ganhos"
+    detail: "Leilao #{id}"
+    sell: "Colocar itens a venda"
+  categories:
+    ALL: "Todos os itens"
+    EQUIP: "Equipamentos"
+    BLOCKS: "Blocos"
+    FOOD: "Comidas"
+    OTHER: "Outros"
+  category:
+    selected: "&a▶ {name}"
+    unselected: "&e{name}"
+    lore-selected: "&7Categoria selecionada"
+    lore-unselected: "&7Clique para filtrar"
+  sorts:
+    ENDING: "Terminando primeiro"
+    NEWEST: "Mais recentes"
+    PRICE_ASC: "Menor preco"
+    PRICE_DESC: "Maior preco"
+  auction-lore:
+    with-bids:
+      - " "
+      - "&8&m                    "
+      - "&7Vendedor: &f{seller}"
+      - "&7Lance atual: &e{amount}"
+      - "&7Maior lance: &f{bidder}"
+      - "&7Termina em: &f{time}"
+    no-bids:
+      - " "
+      - "&8&m                    "
+      - "&7Vendedor: &f{seller}"
+      - "&7Lance inicial: &e{amount}"
+      - "&7Termina em: &f{time}"
+    click:
+      - " "
+      - "&eClique para ver"
+  claim-lore:
+    won:
+      - " "
+      - "&8&m                    "
+      - "&aVoce venceu este leilao"
+      - "&7Valor pago: &e{amount}"
+      - " "
+      - "&eClique para pegar"
+    returned:
+      - " "
+      - "&8&m                    "
+      - "&cItem devolvido (nao vendido/cancelado)"
+      - " "
+      - "&eClique para pegar"
+  buttons:
+    prev:
+      name: "&aPagina anterior"
+      lore:
+        - "&7Pagina {target}/{pages}"
+    next:
+      name: "&aProxima pagina"
+      lore:
+        - "&7Pagina {target}/{pages}"
+    back:
+      name: "&cVoltar ao leilao"
+      lore: []
+    search:
+      name: "&ePesquisar"
+      lore:
+        - "&7Pesquise por jogador ou item"
+        - "&7Pesquisa atual: &f{search}"
+        - "&eEsquerdo: &7pesquisar"
+        - "&eDireito: &7limpar"
+    sort:
+      name: "&eOrdenar"
+      lore:
+        - "&7Atual: &f{sort}"
+        - "&eClique para alternar"
+    refresh:
+      name: "&aAtualizar"
+      lore:
+        - "&7Pagina &f{page}&7/&f{pages}"
+        - "&7Itens: &f{count}"
+    sell:
+      name: "&6Vender item"
+      lore:
+        - "&7Abre o menu de venda"
+    win:
+      name: "&bItens ganhos"
+      lore:
+        - "&7Itens: &f{count}"
+        - "&eClique para abrir"
+    mine:
+      name: "&dMeus leiloes"
+      lore:
+        - "&7Itens que voce esta vendendo"
+    detail-back:
+      name: "&aVoltar"
+      lore: []
+    detail-buy:
+      name: "&aComprar (dar lance)"
+      lore:
+        - "&7Lance minimo: &e{min}"
+        - "&eClique e digite o valor no chat"
+    detail-cancel:
+      name: "&cCancelar leilao"
+      lore:
+        - "&7O item volta para &e/leilao win"
+    detail-cancel-blocked:
+      name: "&cNao e possivel cancelar"
+      lore:
+        - "&7Este item ja recebeu lances"
+    detail-admin:
+      name: "&4[Admin] Cancelar leilao"
+      lore:
+        - "&7Devolve lance e item"
+    detail-seller:
+      name: "&eVer itens de {seller}"
+      lore:
+        - "&7Clique para abrir"
+    sell-cancel:
+      name: "&cCancelar"
+      lore:
+        - "&7Devolve os itens"
+    sell-info:
+      name: "&eComo funciona"
+      lore:
+        - "&7Coloque os itens acima (cada slot vira um leilao)."
+        - "&7Depois clique em &aConfirmar &7e informe"
+        - "&7o lance inicial e a duracao no chat."
+        - "&7Limite: &f{max} &7itens"
+    sell-confirm:
+      name: "&aConfirmar"
+      lore: []

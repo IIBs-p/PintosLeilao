@@ -1,0 +1,25 @@
+name: PintosLeiloes
+version: '1.0-SNAPSHOT'
+
+main: me.iib.PintosLeiloes.PintosLeiloes
+depend: [Vault]
+api-version: '26.1'
+load: POSTWORLD
+
+authors: [ iib ]
+
+commands:
+  leilao:
+    description: Abre o menu de leilão
+    usage: /leilao [nick|sell|win]
+    aliases: [leiloes]
+permissions:
+  leilao.use:
+    description: Usar o leilão
+    default: true
+  leilao.admin:
+    description: Recarregar config e cancelar qualquer leilão
+    default: op
+  leilao.bypass.limit:
+    description: Ignora o limite de itens por jogador
+    default: op
